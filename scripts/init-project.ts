@@ -39,7 +39,7 @@ const PATH_APP_CONFIG = './app/app.config.ts'
 const appConfigContent = fs.readFileSync(PATH_APP_CONFIG, 'utf8')
 	.replace(/'.*?avatar.com.*?'/, 'blogConfig.author.avatar')
 	.replaceAll('L33Z22L11\'', 'octocat\'')
-	.replace('\'/theme\'', `'https://blog.zhilu.site/theme'`)
+	.replace('\'/theme\'', `'https://weizicoding.top/theme'`)
 	.replace(/'.?ICP备.*?'/, '\'备案\'')
 fs.writeFileSync(PATH_APP_CONFIG, appConfigContent)
 
@@ -52,7 +52,7 @@ fs.writeFileSync(PATH_BLOG_CONFIG, blogConfigContent)
 
 // 处理 redirects.json
 fs.writeFileSync('./redirects.json', `{
-  "/theme": "https://blog.zhilu.site/theme"
+  "/theme": "https://weizicoding.top/theme"
 }`)
 
 s.stop('初始化完成')

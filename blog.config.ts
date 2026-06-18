@@ -1,26 +1,26 @@
 import type { FeedEntry } from './app/types/feed'
 
 const basicConfig = {
-	title: '纸鹿摸鱼处',
-	subtitle: '纸鹿至麓不知路，支炉制露不止漉',
+	title: '约定的小镇',
+	subtitle: '写代码是热爱，写到世界充满爱',
 	// 长 description 利好于 SEO
-	description: '纸鹿本鹿的个人博客，分享技术与生活。“折腾不止，摸鱼生活——摸门🙏🏻”。纸鹿是一名开源爱好者，结识了许多志同道合的朋友。这个博客记录了他在生活和技术学习中的点滴经历，充满启发与思考。网站界面简洁美观，内容丰富实用，人气互动活跃，涵盖了编程、生活、学习等多个领域，为读者提供了卓越的阅读体验。',
+	description: 'Gavin 的个人博客，分享技术与生活。技术文章主要围绕使用 Go 语言构建高性能的游戏后端，同时这个博客还记录了他在生活和学习中的点滴经历，充满启发与思考。网站界面简洁美观，内容丰富实用，人气互动活跃，涵盖了编程、生活、学习等多个领域，为读者提供了卓越的阅读体验。',
 	author: {
-		name: '纸鹿本鹿',
-		avatar: 'https://www.zhilu.site/api/avatar.png',
-		email: 'hi@zhilu.cyou',
-		homepage: 'https://www.zhilu.site/',
+		name: '约定的小镇',
+		avatar: 'https://weizicoding.top/api/avatar.png',
+		email: 'guoweigong97@gmail.com',
+		homepage: 'https://weizicoding.top/',
 	},
 	copyright: {
 		abbr: 'CC BY-NC-SA 4.0',
 		name: '署名-非商业性使用-相同方式共享 4.0 国际',
 		url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans',
 	},
-	favicon: 'https://www.zhilu.site/api/icon.png',
+	favicon: 'https://weizicoding.top/api/icon.png',
 	language: 'zh-CN',
 	timeEstablished: '2019-07-19',
 	timeZone: 'Asia/Shanghai',
-	url: 'https://blog.zhilu.site/',
+	url: 'https://weizicoding.top/',
 	defaultCategory: '未分类',
 }
 
@@ -34,11 +34,7 @@ const blogConfig = {
 		categories: {
 			[basicConfig.defaultCategory]: { icon: 'tabler:circle-dashed' },
 			/** 实践可复用操作经验：工具/系统/部署/排障 */
-			技术: { icon: 'tabler:mouse', color: '#33aaff' },
-			/** 编程：代码实现/工程实践/开发方法 */
-			开发: { icon: 'tabler:code', color: '#7777ff' },
-			/** 安全：漏洞/CTF/恶意软件/安全事件分析 */
-			安全: { icon: 'tabler:bug', color: '#ff7733' },
+			技术: { icon: 'tabler:mouse', color: '#338fcce1' },
 			/** 思考：观点讨论/复盘反思/行业或产品观察 */
 			杂谈: { icon: 'tabler:message', color: '#33bbaa' },
 			/** 记录叙事：个人经历/校园家庭/日常片段 */
@@ -52,7 +48,7 @@ const blogConfig = {
 		/** 分类排序方式，键为排序字段，值为显示名称 */
 		order: {
 			date: '创建日期',
-			updated: '更新日期',
+			// updated: '更新日期',
 			// title: '标题',
 		},
 		/** 使用 pnpm new 新建文章时自动生成自定义链接（permalink/abbrlink） */
