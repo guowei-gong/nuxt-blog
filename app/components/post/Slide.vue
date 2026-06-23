@@ -217,7 +217,7 @@ useEventListener(carouselEl, 'wheel', (e) => {
 
 .z-slide-stage {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) minmax(14rem, 34%);
+	grid-template-columns: minmax(0, 1fr) minmax(14rem, 16rem);
 	align-items: stretch;
 	gap: 0;
 
@@ -417,6 +417,7 @@ useEventListener(carouselEl, 'wheel', (e) => {
 	display: grid;
 	align-content: center;
 	gap: 0.2rem;
+	min-width: 0;
 	padding-block: 0.25rem;
 }
 
@@ -425,6 +426,7 @@ useEventListener(carouselEl, 'wheel', (e) => {
 	grid-template-columns: 2.4rem minmax(0, 1fr);
 	align-items: center;
 	gap: 0.35rem;
+	min-height: 3.75rem;
 	padding: 0.85rem 0.9rem;
 	border-radius: 0.5rem;
 	color: var(--c-text-1);
@@ -462,6 +464,18 @@ useEventListener(carouselEl, 'wheel', (e) => {
 	-webkit-line-clamp: 2;
 	line-height: 1.35;
 	-webkit-box-orient: vertical;
+}
+
+@media (max-width: 1390px) {
+	.z-slide-stage {
+		grid-template-columns: 1fr;
+		gap: 0.35rem;
+	}
+
+	.slide-rank {
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+		align-content: stretch;
+	}
 }
 
 @media (max-width: $breakpoint-mobile) {

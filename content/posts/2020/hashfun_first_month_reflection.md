@@ -1,11 +1,8 @@
 ---
 title: 做猪呢，最重要的是开心
-description:
 date: 2020-04-01 19:53:37
-updated:
 type: story
 categories: [生活]
-tags: []
 ---
 
 ## 猪的前言
