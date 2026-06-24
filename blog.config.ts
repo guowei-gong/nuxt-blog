@@ -16,7 +16,7 @@ const basicConfig = {
 		name: '署名-非商业性使用-相同方式共享 4.0 国际',
 		url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans',
 	},
-	favicon: 'https://weizicoding.top/api/icon.png',
+	favicon: 'https://img2.tofaka.com/autoupload/Z3wg1auvHGH_fxQcOFgj2SfNcKcqEnRmcljopnyJoMs/20260624/yIQ2/32X32/favicon.png/webp',
 	language: 'zh-CN',
 	timeEstablished: '2019-07-19',
 	timeZone: 'Asia/Shanghai',
