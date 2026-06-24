@@ -1,22 +1,16 @@
 ---
 title: 修复 WaitGroup 送出的 Panic 大礼包
-description: Node A 的玩家数据残留在 Redis，而 Node B 以相同 ID 顶替上线，跨进程的 sync.WaitGroup 计数污染就此上演。
+description: 跨进程的 sync.WaitGroup 计数污染。
 date: 2026-03-30 15:59:07
 updated:
-image: https://img2.tofaka.com/autoupload/Z3wg1auvHGH_fxQcOFgj2SfNcKcqEnRmcljopnyJoMs/20260618/yuof/1001X623/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_17817742138899.png/webp
 type: story
 categories: [技术]
 tags: [游戏]
-recommend: true
 ---
 
 ## 背景
 
-分布式游戏服务器，架构上分为 Gate 网关、Node 游戏节点，Consul 服务发现，Redis 玩家定位器。 在一次 Game Node 重启后，新启动的节点进程，触发了
-
-`panic: sync: negative WaitGroup counter`
-
-导致节点崩溃。
+分布式游戏服务器，架构上分为 Gate 网关、Node 游戏节点，Consul 服务发现，Redis 玩家定位器。 在一次 Game Node 重启后，新启动的节点进程，触发了 `panic: sync: negative WaitGroup counter` 导致节点崩溃。
 
 ## 为什么使用 WaitGroup
 
@@ -31,7 +25,7 @@ recommend: true
 * **Hang 挂起**：正在优雅关闭，等待任务完成后销毁
     
 
-State 的目的是“能不能接活”，并不知道“有多少活没干完”。当状态变为 Hang，怎么知道已接收的请求都响应了？因此引入 WaitGroup 。以玩家`进入游戏 → 领取任务 →下线`为例，梳理目前 WaitGroup 的完整链路，是我们定位 Panic 的关键。
+State 的目的是“能不能接活”，并不知道“有多少活没干完”。当状态变为 Hang，怎么知道已接收的请求都响应了？因此引入 WaitGroup 。以玩家`进入游戏 → 领取任务 →下线`为例，梳理目前 WaitGroup 的完整链路，是定位 Panic 的关键。
 
 ### 玩家上线
 

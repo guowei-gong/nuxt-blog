@@ -3,7 +3,7 @@ title: 游戏帧同步
 description: 介绍该问题的基本概念和常见解决方案，我并没有做过帧同步的工作，分享的知识都是我对它感兴趣，在网上看了许多经验后整理的。
 date: 2023-09-11 18:34:07
 updated:
-image: https://img2.tofaka.com/autoupload/Z3wg1auvHGH_fxQcOFgj2SfNcKcqEnRmcljopnyJoMs/20260616/hMiP/3840X2160/wallhaven-ly229p.png/webp
+image: https://img2.tofaka.com/autoupload/Z3wg1auvHGH_fxQcOFgj2SfNcKcqEnRmcljopnyJoMs/20260624/Px6d/3840X2160/%E5%8F%AF%E7%88%B1%E7%8E%A9%E5%81%B6-%E5%9C%B0%E9%9D%A2%E8%90%BD%E5%8F%B6.png/webp
 type: story
 categories: [技术]
 tags: [游戏, 帧同步]

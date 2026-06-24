@@ -1,5 +1,5 @@
 ---
-title: 搭建 Redis 主从模式
+title: 使用 Docker 搭建 Redis 主从模式
 description: 主从模式可以避免机器故障引发的数据丢失。
 date: 2024-11-23 19:53:37
 updated:
