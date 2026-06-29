@@ -15,7 +15,6 @@ export default [
 			// #region 2026
 			{
 				author: '狡猫三窝',
-				sitenick: '',
 				desc: '“美”不是一种外部标准，它是一种内在情感。那是爱',
 				link: 'https://slykiten.com/',
 				feed: 'https://slykiten.com/feed',
@@ -24,7 +23,17 @@ export default [
 				archs: ['Hugo'],
 				date: '2026-06-18',
 				comment: '本科毕业后旅居日本读博，毕业后辗转美国，暂以科研谋生。',
-			}
+			},
+			{
+				author: 'Airing 的小屋',
+				desc: '应无所住而生其心',
+				link: 'https://ursb.me',
+				feed: 'https://ursb.me/blog/feed.xml',
+				icon: 'https://airing.ursb.me/image/favicon.ico',
+				avatar: 'https://airing.ursb.me/image/airing-face.png',
+				date: '2026-06-29',
+				comment: '哲学硕士。',
+			},
 			/* ========从此处新增友链======== */
 		],
 	},
@@ -44,7 +53,15 @@ export default [
 				avatar: getGithubAvatar('geektutu'),
 				archs: ['Hugo'],
 				date: '2026-06-18',
-				comment: '主要以 Go 相关的技术为主的分享，文笔通俗易懂，技术含量极高。',
+			},
+			{
+				author: '小土刀',
+				desc: '90后，曾居北京、匹兹堡，现居深圳。本科中山大学，研究生卡耐基梅隆大学，目前在 Xsignal 担任技术总监。',
+				link: 'https://www.wdxtub.com/',
+				icon: getGithubIcon('wdxtub'),
+				avatar: getGithubAvatar('wdxtub'),
+				archs: ['Next.js'],
+				date: '2026-06-29',
 			},
 			{
 				author: 'DaiJun Wu',
@@ -64,7 +81,7 @@ export default [
 				icon: getGithubIcon('meituan'),
 				avatar: getGithubAvatar('meituan'),
 				date: '2026-06-18',
-				comment: '难得一见不水文章的互联网大厂，没有侃侃而谈，实用且有深度。',
+				comment: '没有侃侃而谈，实用且有深度。',
 			},
 			{
 				author: 'Eli Bendersky',
@@ -73,7 +90,7 @@ export default [
 				icon: getGithubIcon('eliben'),
 				avatar: getGithubAvatar('eliben'),
 				date: '2026-06-18',
-				comment: '文章简短，通俗易懂，GoByExample 作者。',
+				comment: '文章简短，GoByExample 作者。',
 			},
 		],
 	},
