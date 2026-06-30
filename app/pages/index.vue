@@ -15,8 +15,26 @@ const { listSorted, isAscending, sortOrder } = useArticleSort(listRaw, { bindDir
 const { category, categories, listCategorized } = useCategory(listSorted, { bindQuery: 'category' })
 const { page, totalPages, listPaged } = usePagination(listCategorized, { bindQuery: 'page' })
 
+const isPaging = ref(false)
+let pagingTimer: ReturnType<typeof setTimeout> | undefined
+
+watch(page, (newPage, oldPage) => {
+	if (newPage === oldPage)
+		return
+
+	isPaging.value = true
+	clearTimeout(pagingTimer)
+	pagingTimer = setTimeout(() => {
+		isPaging.value = false
+	}, 180)
+}, { flush: 'sync' })
+
 watch(category, () => {
 	page.value = 1
+})
+
+onBeforeUnmount(() => {
+	clearTimeout(pagingTimer)
 })
 
 useSeoMeta({ title: () => (page.value > 1 ? `第${page.value}页` : '') })
@@ -54,16 +72,18 @@ const { data: previewCount } = useAsyncData(
 			</ZSecret>
 		</PostOrderToggle>
 
-		<TransitionGroup tag="menu" class="proper-height" name="float-in">
-			<PostArticle
-				v-for="article, index in listPaged"
-				:key="article.path"
-				v-bind="article"
-				:to="article.path"
-				:use-updated="sortOrder === 'updated'"
-				:style="getFixedDelay(index * 0.05)"
-			/>
-		</TransitionGroup>
+		<Transition name="post-page" mode="out-in">
+			<menu :key="page" class="proper-height post-page-list" :class="{ 'is-paging': isPaging }">
+				<PostArticle
+					v-for="article, index in listPaged"
+					:key="article.path"
+					v-bind="article"
+					:to="article.path"
+					:use-updated="sortOrder === 'updated'"
+					:style="getFixedDelay(isPaging ? 0 : index * 0.05)"
+				/>
+			</menu>
+		</Transition>
 
 		<ZPagination v-model="page" sticky avoid :total-pages="totalPages" />
 	</div>
@@ -75,7 +95,20 @@ const { data: previewCount } = useAsyncData(
 	margin: 1rem;
 }
 
-.float-in-leave-to {
-	position: absolute;
+.post-page-enter-active,
+.post-page-leave-active {
+	transition: opacity 0.12s ease, transform 0.12s ease;
+}
+
+.post-page-enter-from,
+.post-page-leave-to {
+	opacity: 0;
+	transform: translateY(0.25rem);
+}
+
+.post-page-list.is-paging {
+	:deep(.article-card) {
+		animation: none;
+	}
 }
 </style>
