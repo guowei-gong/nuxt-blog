@@ -2,12 +2,10 @@
 title: 读薄《代码大全2》
 description: 点出书本中的重点概念，并用 Go 语言代码进行示例说明。
 date: 2025-08-05 19:53:37
-image: https://img2.tofaka.com/autoupload/Z3wg1auvHGH_fxQcOFgj2SfNcKcqEnRmcljopnyJoMs/20260618/qsBG/2560X1440/andreas-gucklhorn-mawU2PoJWfU-unsplash.jpg/webp
 updated:
 type: story
 categories: [技术]
 tags: [代码大全2]
-recommend: true
 ---
 
 ## 第十四章 组织直线型代码

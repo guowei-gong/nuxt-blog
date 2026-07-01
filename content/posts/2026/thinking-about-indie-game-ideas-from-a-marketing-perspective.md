@@ -1,6 +1,7 @@
 ---
 title: 从行销的角度思考游戏创意
 date: 2026-06-30 15:59:07
+updated: 2026-07-01 17:00:00
 type: tech
 categories: [杂谈]
 tags: [游戏]
