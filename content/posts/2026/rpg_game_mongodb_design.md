@@ -1,6 +1,6 @@
 ---
 title: 三元组单集合的游戏数据存储方案
-image: https://img2.tofaka.com/autoupload/Z3wg1auvHGH_fxQcOFgj2SfNcKcqEnRmcljopnyJoMs/20260708/bwlb/844X430/db6058b984a040b7f5cd8ee57d7678d.png/webp
+image: https://img2.tofaka.com/autoupload/Z3wg1auvHGH_fxQcOFgj2SfNcKcqEnRmcljopnyJoMs/20260708/HeRQ/1036X441/bili%E5%A4%8F%E5%A4%A9.jpg/webp
 date: 2026-07-07 17:09:00
 updated: 2026-07-08 16:22:00
 description: 现在的游戏服务器通常使用 NoSQL 作为 DB 以满足 Model 设计上的灵活性，MongoDB 则是 NoSQL 的代表之一。本文看点是 MongoDB 在游戏场景的存储方案、索引设计和代码层落地，每个部分都可以单独食用。
